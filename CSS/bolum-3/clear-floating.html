@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        background-color: blueviolet;
+      }
+      .box {
+        width: 150px;
+        height: 100px;
+        background-color: aquamarine;
+        float: right;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container" class="clearfix">
+      <div class="box">kutu</div>
+      <div class="box">kutu2</div>
+      <div class="box">kutu3</div>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+  </body>
+</html>

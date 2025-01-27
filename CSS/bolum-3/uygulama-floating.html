@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>uygulama floating</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      #header,
+      footer {
+        background-color: bisque;
+        padding: 15px;
+        color: darkblue;
+      }
+      .main__left {
+        width: 25%;
+      }
+      .main__right {
+        width: 75%;
+      }
+      .col {
+        float: left;
+        padding: 15px;
+      }
+      #main {
+        display: block;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: block;
+      }
+      .main__left ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .main__left li {
+        padding: 8px;
+        margin-bottom: 8px;
+        background-color: cadetblue;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header"><h2>Web geliştirme Sitesi</h2></header>
+    <main id="main" class="clearfix">
+      <div class="main__left col">
+        <ul>
+          <li>Html</li>
+          <li>Css</li>
+          <li>Javascript</li>
+        </ul>
+      </div>
+      <div class="main__right col">
+        <h1>KOMPLE UYGULAMALI WEB GELİŞTİRME</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+          aliquam architecto ab beatae magnam dolor tenetur, dolorum eum unde,
+          laboriosam sequi? Repudiandae tempora natus totam deleniti aut modi
+          corporis esse!
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          aliquam sit eaque, et commodi cupiditate possimus neque accusantium
+          nihil.
+        </p>
+      </div>
+    </main>
+    <footer id="footer">
+      <h2>uygulanin haklari bana aittir</h2>
+    </footer>
+  </body>
+</html>

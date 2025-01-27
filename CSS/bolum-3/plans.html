@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umut's MovieApp</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      #showcase {
+        background: url(IEOG7683\ -\ Kopya.JPG);
+        background-position: center;
+        height: 500px;
+        width: 100%;
+        padding: 10px;
+      }
+      #how-it-works {
+        padding: 10px;
+        text-align: center;
+      }
+      .main-header {
+        background-color: rgb(52, 72, 77);
+        padding: 8px 8px;
+      }
+      .main-nav {
+        display: inline-block;
+        width: calc(100% - 99px);
+        text-align: right;
+      }
+      .main-nav__items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .main-nav__item {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      .main-header__logo {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 21px;
+      }
+      .main-nav__item a {
+        text-decoration: none;
+        color: white;
+      }
+      .main-nav__item a:hover,
+      .main-nav__item:hover::before {
+        color: rgb(102, 240, 245);
+      }
+
+      .main-nav__item:active::before,
+      .main-nav__item a:active {
+        color: white;
+      }
+
+      .main-nav__item::before {
+        content: "\2022";
+        color: white;
+      }
+      .main-nav__item--login a {
+        color: white;
+        background-color: darkcyan;
+        padding: 4px 16px;
+        border-radius: 10px 10px;
+        border: 2px solid #fff;
+      }
+      .main-nav__item--login a:hover {
+        color: rgb(102, 240, 245);
+        background-color: white;
+        border: 2px solid rgb(102, 240, 245);
+      }
+      .main-nav__item--login::before {
+        content: none;
+      }
+      .row {
+        margin: 20px;
+      }
+      .col {
+        display: inline-block;
+        width: 30%;
+        padding: 16px;
+        margin: 8px;
+      }
+      #features {
+        background-color: bisque;
+      }
+      .col-2 {
+        width: calc(50% - 2px);
+        display: inline-block;
+        padding: 16px;
+        height: 350px;
+        vertical-align: middle;
+      }
+      .features__left {
+        background: url(IEOG7683\ -\ Kopya.JPG);
+        background-size: cover;
+        background-position: center top;
+      }
+      .features__right {
+        text-align: center;
+        vertical-align: top;
+        padding: 40px;
+      }
+      .features__right h4 {
+        font-size: 30px;
+      }
+      .features__right a:hover {
+        border: black solid 5px;
+        background-color: black;
+        color: #fff;
+        border-radius: 10px;
+      }
+      .features__right a {
+        background-color: white;
+        text-decoration: none;
+        font-size: 20px;
+        color: black;
+        border: white solid 5px;
+        border-radius: 10px;
+      }
+      .section-title {
+        text-align: center;
+      }
+      .plan {
+        text-align: center;
+        padding: 5px;
+        width: 33.3%;
+        float: left;
+      }
+      .inner-plan {
+        background: #81dbf1;
+        padding: 25px 10px;
+      }
+
+      .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      .container {
+        margin: 0 auto;
+        width: 1000px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="#" class="main-header__logo">MovieApp</a>
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="#">Filmler</a></li>
+          <li class="main-nav__item"><a href="#">Diziler</a></li>
+          <li class="main-nav__item main-nav__item--login">
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="showcase">
+        <h1>Welcome to movieapp</h1>
+      </section>
+      <section id="how-it-works">
+        <div class="row">
+          <h2>How it works?</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus in
+            consequuntur aperiam dolores?
+          </p>
+        </div>
+        <div class="row">
+          <div class="col">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <h3>Register</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+          <div class="col">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Choose a Plan</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat.
+            </p>
+          </div>
+          <div class="col">
+            <i class="fa-regular fa-face-smile"></i>
+            <h3>Enjoy Movify</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </section>
+      <section id="features">
+        <div class="row-2">
+          <div class="col-2 features__left"></div>
+          <div class="col-2 features__right">
+            <h4>Watch all Movies & TV Shows once they get released</h4>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Temporibus inventore incidunt nulla. Tempora adipisci quod sequi
+              odio dicta. Amet quos veniam, excepturi quas nemo sit culpa
+              aperiam? Facere, natus assumenda.
+            </p>
+            <a href="#" class="features-button">View Features</a>
+          </div>
+        </div>
+      </section>
+      <section id="plans">
+        <div class="row">
+          <h2 class="section-title">Become a Premium Member</h2>
+          <div class="container clearfix">
+            <div class="plan">
+              <div class="inner-plan">
+                <h2>Free</h2>
+                <h3>0/Month</h3>
+                <ul>
+                  <li>Hd available</li>
+                  <li>Unlimitad movies and Tv Shows</li>
+                  <li>Watch on your phone & tablet</li>
+                  <li>download and watch online</li>
+                  <li>Screens you can watch</li>
+                  <li>First month trial</li>
+                </ul>
+                <div>
+                  <button>Choose plan</button>
+                </div>
+              </div>
+            </div>
+            <div class="plan">
+              <div class="inner-plan">
+                <h2>Recommended</h2>
+                <h3>9.99/Month</h3>
+                <ul>
+                  <li>Hd available</li>
+                  <li>Unlimitad movies and Tv Shows</li>
+                  <li>Watch on your phone & tablet</li>
+                  <li>download and watch online</li>
+                  <li>Screens you can watch</li>
+                  <li>First month trial</li>
+                </ul>
+                <div>
+                  <button>Choose plan</button>
+                </div>
+              </div>
+            </div>
+            <div class="plan">
+              <div class="inner-plan">
+                <h2>Premium</h2>
+                <h3>19.99/Month</h3>
+                <ul>
+                  <li>Hd available</li>
+                  <li>Unlimitad movies and Tv Shows</li>
+                  <li>Watch on your phone & tablet</li>
+                  <li>download and watch online</li>
+                  <li>Screens you can watch</li>
+                  <li>First month trial</li>
+                </ul>
+                <div>
+                  <button>Choose plan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      #showcase {
+        background: url(IEOG7683\ -\ Kopya.JPG);
+        background-position: center;
+        height: 500px;
+        width: 100%;
+        padding: 10px;
+      }
+      #how-it-works {
+        padding: 10px;
+        text-align: center;
+      }
+      .main-header {
+        background-color: rgb(52, 72, 77);
+        padding: 8px 8px;
+      }
+      .main-nav {
+        display: inline-block;
+        width: calc(100% - 99px);
+        text-align: right;
+      }
+      .main-nav__items {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      .main-nav__item {
+        display: inline-block;
+        margin: 0 10px;
+      }
+      .main-header__logo {
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 21px;
+      }
+      .main-nav__item a {
+        text-decoration: none;
+        color: white;
+      }
+      .main-nav__item a:hover,
+      .main-nav__item:hover::before {
+        color: rgb(102, 240, 245);
+      }
+
+      .main-nav__item:active::before,
+      .main-nav__item a:active {
+        color: white;
+      }
+
+      .main-nav__item::before {
+        content: "\2022";
+        color: white;
+      }
+      .main-nav__item--login a {
+        color: white;
+        background-color: darkcyan;
+        padding: 4px 16px;
+        border-radius: 10px 10px;
+        border: 2px solid #fff;
+      }
+      .main-nav__item--login a:hover {
+        color: rgb(102, 240, 245);
+        background-color: white;
+        border: 2px solid rgb(102, 240, 245);
+      }
+      .main-nav__item--login::before {
+        content: none;
+      }
+      .row {
+        margin: 20px;
+      }
+      .col {
+        display: inline-block;
+        width: 30%;
+        padding: 16px;
+        margin: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="main-header">
+      <a href="#" class="main-header__logo">MovieApp</a>
+      <nav class="main-nav">
+        <ul class="main-nav__items">
+          <li class="main-nav__item"><a href="#">Filmler</a></li>
+          <li class="main-nav__item"><a href="#">Diziler</a></li>
+          <li class="main-nav__item main-nav__item--login">
+            <a href="#">Login</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="showcase">
+        <h1>Welcome to movieapp</h1>
+      </section>
+      <section id="how-it-works">
+        <div class="row">
+          <h2>How it works?</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus in
+            consequuntur aperiam dolores?
+          </p>
+        </div>
+        <div class="row">
+          <div class="col">
+            <h3>Register</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+          </div>
+          <div class="col">
+            <h3>Choose a Plan</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat.
+            </p>
+          </div>
+          <div class="col">
+            <h3>Enjoy Movify</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
