@@ -3,54 +3,77 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import axios from "axios";
-import { use } from "react";
 
 const BASE_URL = "http://localhost:3000";
 
 function App() {
-  //async ve await kullanimi api islemleri bittikten sonra asagidaki kod bloklari calismasi icin
   const getAllUsers = async () => {
     const response = await axios.get(BASE_URL + "/users");
-    console.log(response.data);
+    console.log(response.data.id);
   };
 
-  const getUserById = async (id) => {
-    const response = await axios.get(BASE_URL + "/users/" + id);
+  const getUserByIda = async (userId) => {
+    const response = await axios.get(BASE_URL + "/users/" + userId);
     console.log(response.data);
   };
 
   const createUser = async (newUser) => {
-    //Post veri eklemek icin kullanilir
     const response = await axios.post(`${BASE_URL}/users`, newUser);
-    console.log(response);
+    //post veri eklemek icin kullanilir
+    console.log("response", response.data);
   };
 
   const updateUser = async (userId, updatedUser) => {
-    // PUT : veri guncellemek icin kullanilir/
+    // put veri guncellemek icin kulllanilir
     await axios.put(`${BASE_URL}/users/${userId}`, updatedUser);
   };
 
-  const deleteUser = async (userId) => {
-    //Delete : veri silmek icin kullanilir
-    await axios.delete(`${BASE_URL}/users/${userId}`);
+  const deletedUserById = async (userId) => {
+    const response = await axios.delete(`${BASE_URL}/users/${userId}`);
+    console.log(response.data);
+  };
+
+  const getUserById = async (userId) => {
+    const response = await axios.get(`${BASE_URL}/users/${userId}`);
+    return response.data.postId;
+  };
+
+  const getPostById = async (postId) => {
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/posts/" + postId
+    );
+    return response.data;
+  };
+
+  const getPost = async () => {
+    var postId = await getUserById(1);
+    // const postdata = await getPostById(postId);
+    // console.log(postdata);
+    console.log(postId);
+    const postdata = await getPostById(7);
+    console.log(postdata);
   };
   useEffect(() => {
     // getAllUsers();
-    // getUserById(1);
-    // CREATE
+    // getUserById(3);
+    //--------------------------------
     // const newUser = {
-    //   username: "diyar",
+    //   id: 4,
+    //   username: "bilal",
     //   password: "1234",
     // };
     // createUser(newUser);
-    // UPDATE
-    // updateUser("6772", {
+    //--------------------------------
+    // updateUser("4", {
     //   username: "deniz",
-    //   password: "12345",
+    //   password: "54213",
     // });
-    // DELETE
-    // deleteUser("41ab");
+    //--------------------------------
+    // deletedUserById("4");
+
+    getPost();
   }, []);
+
   return <div></div>;
 }
 
