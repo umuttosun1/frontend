@@ -5,12 +5,11 @@ const initialState = {
   users: [],
   loading: false,
 };
-
+// http istek kullanirken createAsyncThunk kullanilir
 export const getAllUsers = createAsyncThunk("users", async () => {
   const response = await axios.get(
     "https://jsonplaceholder.typicode.com/users"
   );
-  console.log(response.data);
   return response.data;
 });
 
