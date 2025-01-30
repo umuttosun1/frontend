@@ -22,8 +22,8 @@ function Header() {
   return (
     <div className="header">
       <div className="flex-row">
-        <img className="logo" src="./src/image/logo.jpeg" alt="" />
-        <p className="logo-text">U-Commerce</p>
+        <img className="logo" src="./src/image/logo.png" alt="" />
+        <p className="logo-text">Nba-Commerce</p>
       </div>
       <div className="flex-row">
         <input className="input" type="text" placeholder="Search Something" />
