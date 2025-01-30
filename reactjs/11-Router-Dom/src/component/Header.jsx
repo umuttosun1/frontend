@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="header">
-      <div>UYGULAMA</div>
+      <div style={{ marginLeft: "10px", color: "aliceblue" }}>UYGULAMA</div>
       <div>
         <Link className="link" to="/">
           Home
