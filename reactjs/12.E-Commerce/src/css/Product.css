@@ -25,3 +25,22 @@
   cursor: pointer;
   background-color: rgb(67, 161, 243);
 }
+.add-basket {
+  margin-top: 30px;
+  border: none;
+  font-size: medium;
+  background-color: rgb(104, 178, 243);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+.add-basket:hover {
+  cursor: pointer;
+  background-color: rgb(67, 161, 243);
+}
+.product-image {
+  width: "400px";
+  height: "400px";
+  margin-top: "100px";
+  margin-right: "100px";
+}
