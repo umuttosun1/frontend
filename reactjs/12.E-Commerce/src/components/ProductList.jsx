@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllProducts } from "../redux/slices/ProductSlice";
+import Product from "./Product";
 
 function ProductList() {
   const dispatch = useDispatch();
@@ -12,7 +13,14 @@ function ProductList() {
     dispatch(getAllProducts());
   }, []);
 
-  return <div>ProductList</div>;
+  return (
+    <div className="flex-row" style={{ flexWrap: "wrap", marginTop: "25px" }}>
+      {products &&
+        products.map((product) => (
+          <Product key={product.id} product={product} />
+        ))}
+    </div>
+  );
 }
 
 export default ProductList;
