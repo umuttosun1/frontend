@@ -2,10 +2,10 @@
 // any degeri bilinmeyen degiskenler icin ilk degerini girmek icin kullanilir
 
 let age: number = 24;
-
 let name: string = "umut";
-let dsa: any = 23;
+let abc: any = 23;
 
+console.log(abc);
 console.log(age);
 console.log(name);
 
@@ -46,3 +46,57 @@ console.log(numbers2);
 
 let array_name: (number | string | boolean)[] = ["umut", "tosun", 21, true];
 console.log(array_name);
+
+//-----------------------------------------------------------------------
+// interface ve type : kendi tipimizi olusturmamizi sagliyor.
+
+// TYPE
+type User2 = {
+  name: string;
+  age: number;
+};
+
+// INTERFACE
+interface User {
+  name: string;
+  age?: number;
+}
+
+const object1: User2 = {
+  name: "umut",
+  age: 21,
+  // age : true             bunu kabul etmez . Userin icinde tanimlananlar disinda yeni degisken eklenemez
+};
+console.log(object1);
+
+let array2: User[] = [{ name: "ahmet", age: 32 }];
+
+console.log(array2);
+
+// Optional Type ?
+// Userda agein yanina soru isareti koydugum icin opsiyonel kullanim oldu ister kullanir ister kullanmam
+const object2: User = {
+  name: "umut",
+};
+console.log(object2);
+//---------------------------------------------------------------------------------
+// Function tanimlamalari
+
+function topla(a: number, b: number): number | string {
+  //bir suru islem yapmisim gibi dusun
+  console.log(a + b);
+  return a + b;
+  //   return "umut";
+  // return isleminde geriye donecek veri tipini parantezin disinda tanimlarin
+}
+const sonuc = topla(2, 4);
+console.log(sonuc);
+
+topla(2, 3);
+
+function write(array5: Array<string>): void {
+  array5.forEach((value) => console.log(value));
+}
+
+let dizi: Array<string> = ["umut", "tosun", "Ece"];
+write(dizi);
