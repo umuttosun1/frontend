@@ -100,3 +100,99 @@ function write(array5: Array<string>): void {
 
 let dizi: Array<string> = ["umut", "tosun", "Ece"];
 write(dizi);
+
+// generic type
+
+function yazdir<T>(array: T[]): void {
+  console.log(array);
+}
+
+yazdir(["umut", "tosun"]);
+yazdir(["umut", 3]);
+yazdir([false, true]);
+yazdir([23, 54]);
+
+interface GenericType<T> {
+  name: string;
+  age: number;
+  salary: T[];
+}
+
+const obj4: GenericType<string> = {
+  name: "umut",
+  age: 21,
+  salary: ["23000", "24000"],
+};
+const obj5: GenericType<number> = {
+  name: "ahmet",
+  age: 23,
+  salary: [21222, 54444],
+};
+
+function write2<T>(array: GenericType<T>[]): void {
+  array.forEach((value: GenericType<T>) => console.log(value));
+}
+
+let array43: GenericType<string | number>[] = [obj4, obj5];
+
+write2(array43);
+
+// extends - miras alma
+
+interface OrtakAlanlar {
+  id: string;
+  createDate: string;
+  olusturanKisi: string;
+}
+
+interface Musteri extends OrtakAlanlar {
+  musteriNo: string;
+}
+interface Kurum extends OrtakAlanlar {
+  kurumNo: string;
+}
+
+const kurum: Kurum = {
+  id: "1",
+  createDate: "123.32.32.2",
+  olusturanKisi: "yunus",
+  kurumNo: "2313213",
+};
+console.log(kurum);
+
+//--------------------------
+// partial , required, readonly, pick , omit
+
+interface kullanici {
+  name: string;
+  age: number;
+}
+
+// partial : hepsi opsiyonel gibi davranilir
+const kullanici1: Partial<kullanici> = {
+  name: "esila",
+};
+
+//required :  her seyi doldurmak zorunda birakir
+const kullanici2: Required<kullanici> = {
+  name: "esila",
+  //age: 23
+};
+
+// readonly : sadece okunabilir yapar
+const kullanici3: Readonly<kullanici> = {
+  name: "esila",
+};
+
+kullanici3.name = "umut";
+
+// pick :sadece belirtilen degiskeni almak icin kullanilir
+const kullanici4: Pick<kullanici, "name"> = {
+  name: "esila",
+};
+
+// omit : belirtilen degisken disindakileri almak icin kullanilir
+const kullanici5: Omit<kullanici, "name"> = {
+  //   name: "esila",
+  age: 23,
+};
