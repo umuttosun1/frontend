@@ -1,15 +1,16 @@
 import React from "react";
-import { CiSquareRemove } from "react-icons/ci";
-import { FiEdit } from "react-icons/fi";
+import { useSelector } from "react-redux";
+import { RootState } from "../redux/store";
+import Todo from "./Todo";
+import { TodoType } from "../types/Types";
 
 function TodoList() {
+  const { todos } = useSelector((state: RootState) => state.todo);
+
   return (
-    <div className="todo">
-      <div>ben ilk todoyum</div>
-      <div>
-        <CiSquareRemove className="icons" />
-        <FiEdit className="icons" />
-      </div>
+    <div>
+      {todos &&
+        todos.map((todo: TodoType) => <Todo key={todo.id} todoProps={todo} />)}
     </div>
   );
 }

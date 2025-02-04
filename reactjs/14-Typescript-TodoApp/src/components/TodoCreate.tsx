@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { createTodo } from "../redux/todoSlice";
-import { TodoType } from "../types/types";
+import { TodoType } from "../types/Types";
 
 function TodoCreate() {
   const dispatch = useDispatch();
