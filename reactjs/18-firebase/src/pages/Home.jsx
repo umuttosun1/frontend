@@ -1,9 +1,29 @@
-import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import RouterConfig from "../config/RouterConfig";
+import React, { useEffect, useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../Firebase";
 
 function Home() {
-  return <div>Home</div>;
+  const [user, setUser] = useState("");
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (userCredential) => {
+      if (userCredential) {
+        console.log(userCredential);
+        setUser(userCredential.email);
+      }
+    });
+  }, []);
+
+  return (
+    <div
+      style={{
+        margin: "10px",
+        fontSize: "25px",
+      }}
+    >
+      Merhaba {user}
+    </div>
+  );
 }
 
 export default Home;

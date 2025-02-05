@@ -3,15 +3,35 @@ import { FaGoogle } from "react-icons/fa";
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 import { toast } from "react-toastify";
 import { auth } from "../Firebase";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+const provider = new GoogleAuthProvider();
 
 function Auth() {
   const [email, setEmail] = useState("");
+
   const [password, setPassword] = useState("");
+
   const navigate = useNavigate();
+
+  const loginWithGoogle = async () => {
+    try {
+      const response = await signInWithPopup(auth, provider);
+      // const credential = GoogleAuthProvider.credentialFromResult(response);
+      // const token = credential.accessToken;
+      const user = response.user;
+      if (user) {
+        navigate("/");
+      }
+    } catch (error) {
+      toast.error(error.message);
+    }
+  };
 
   const register = async () => {
     try {
@@ -61,7 +81,7 @@ function Auth() {
         />
       </div>
       <div>
-        <button className="btn-google">
+        <button onClick={loginWithGoogle} className="btn-google">
           <FaGoogle style={{ marginTop: "3px" }} />
           Google ile Giris
         </button>
