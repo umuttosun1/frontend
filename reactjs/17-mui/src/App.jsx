@@ -3,6 +3,7 @@ import MuiAutoComplete from "./components/MuiAutoComplete";
 import MuiButton from "./components/MuiButton";
 import MuiCheckbox from "./components/MuiCheckbox";
 import MuiSelect from "./components/MuiSelect";
+import MuiStack from "./components/MuiStack";
 import MuiTextField from "./components/MuiTextField";
 
 function App() {
@@ -12,7 +13,8 @@ function App() {
       {/* <MuiTextField /> */}
       {/* <MuiSelect /> */}
       {/* <MuiCheckbox /> */}
-      <MuiAutoComplete />
+      {/* <MuiAutoComplete /> */}
+      <MuiStack />
     </div>
   );
 }
