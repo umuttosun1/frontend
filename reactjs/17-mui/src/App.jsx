@@ -5,6 +5,7 @@ import MuiAutoComplete from "./components/MuiAutoComplete";
 import MuiButton from "./components/MuiButton";
 import MuiCard from "./components/MuiCard";
 import MuiCheckbox from "./components/MuiCheckbox";
+import MuiDrawer from "./components/MuiDrawer";
 import MuiGrid from "./components/MuiGrid";
 import MuiImageList from "./components/MuiImageList";
 import MuiSelect from "./components/MuiSelect";
@@ -24,7 +25,8 @@ function App() {
       {/* <MuiCard /> */}
       {/* <MuiAccordion /> */}
       {/* <MuiAppBar /> */}
-      <MuiImageList />
+      {/* <MuiImageList /> */}
+      <MuiDrawer />
     </div>
   );
 }
