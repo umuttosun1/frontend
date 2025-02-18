@@ -2,6 +2,7 @@ import "./App.css";
 import MuiAccordion from "./components/MuiAccordion";
 import MuiAppBar from "./components/MuiAppBar";
 import MuiAutoComplete from "./components/MuiAutoComplete";
+import MuiAvatar from "./components/MuiAvatar";
 import MuiBadge from "./components/MuiBadge";
 import MuiButton from "./components/MuiButton";
 import MuiCard from "./components/MuiCard";
@@ -28,7 +29,8 @@ function App() {
       {/* <MuiAppBar /> */}
       {/* <MuiImageList /> */}
       {/* <MuiDrawer /> */}
-      <MuiBadge />
+      {/* <MuiBadge /> */}
+      <MuiAvatar />
     </div>
   );
 }
