@@ -6,6 +6,7 @@ import MuiButton from "./components/MuiButton";
 import MuiCard from "./components/MuiCard";
 import MuiCheckbox from "./components/MuiCheckbox";
 import MuiGrid from "./components/MuiGrid";
+import MuiImageList from "./components/MuiImageList";
 import MuiSelect from "./components/MuiSelect";
 import MuiStack from "./components/MuiStack";
 import MuiTextField from "./components/MuiTextField";
@@ -22,7 +23,8 @@ function App() {
       {/* <MuiGrid /> */}
       {/* <MuiCard /> */}
       {/* <MuiAccordion /> */}
-      <MuiAppBar />
+      {/* <MuiAppBar /> */}
+      <MuiImageList />
     </div>
   );
 }
