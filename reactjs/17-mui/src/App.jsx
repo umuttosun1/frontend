@@ -13,6 +13,7 @@ import MuiImageList from "./components/MuiImageList";
 import MuiSelect from "./components/MuiSelect";
 import MuiStack from "./components/MuiStack";
 import MuiTextField from "./components/MuiTextField";
+import MuiTooltip from "./components/MuiTooltip";
 
 function App() {
   return (
@@ -30,7 +31,8 @@ function App() {
       {/* <MuiImageList /> */}
       {/* <MuiDrawer /> */}
       {/* <MuiBadge /> */}
-      <MuiAvatar />
+      {/* <MuiAvatar /> */}
+      <MuiTooltip />
     </div>
   );
 }
