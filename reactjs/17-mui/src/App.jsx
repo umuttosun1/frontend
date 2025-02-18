@@ -12,6 +12,7 @@ import MuiDialog from "./components/MuiDialog";
 import MuiDrawer from "./components/MuiDrawer";
 import MuiGrid from "./components/MuiGrid";
 import MuiImageList from "./components/MuiImageList";
+import MuiProgress from "./components/MuiProgress";
 import MuiSelect from "./components/MuiSelect";
 import MuiSnackbar from "./components/MuiSnackbar";
 import MuiStack from "./components/MuiStack";
@@ -38,7 +39,8 @@ function App() {
       {/* <MuiTooltip /> */}
       {/* <MuiAlert /> */}
       {/* <MuiDialog /> */}
-      <MuiSnackbar />
+      {/* <MuiSnackbar /> */}
+      <MuiProgress />
     </div>
   );
 }
